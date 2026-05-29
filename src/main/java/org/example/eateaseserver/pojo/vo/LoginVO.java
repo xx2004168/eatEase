@@ -1,4 +1,4 @@
-package org.example.eateaseserver.pojo.dto;
+package org.example.eateaseserver.pojo.vo;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;

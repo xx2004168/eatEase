@@ -2,6 +2,8 @@ package org.example.eateaseserver.pojo.entity;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.time.LocalTime;
 import java.util.Date;
@@ -13,6 +15,7 @@ import java.util.Date;
  */
 @Schema(description = "时段定义表（用于预设可预约时段）")
 @Table(name="order_time_slot")
+@Data
 public class OrderTimeSlot implements Serializable,Cloneable{
     /**  */
     @Id
@@ -29,36 +32,4 @@ public class OrderTimeSlot implements Serializable,Cloneable{
     @Schema(description = "结束时间")
     private LocalTime endTime ;
 
-    /**  */
-    public Long getId(){
-        return this.id;
-    }
-    /**  */
-    public void setId(Long id){
-        this.id=id;
-    }
-    /** 食堂ID */
-    public Long getCanteenId(){
-        return this.canteenId;
-    }
-    /** 食堂ID */
-    public void setCanteenId(Long canteenId){
-        this.canteenId=canteenId;
-    }
-    /** 开始时间 */
-    public LocalTime getStartTime(){
-        return this.startTime;
-    }
-    /** 开始时间 */
-    public void setStartTime(LocalTime startTime){
-        this.startTime=startTime;
-    }
-    /** 结束时间 */
-    public LocalTime getEndTime(){
-        return this.endTime;
-    }
-    /** 结束时间 */
-    public void setEndTime(LocalTime endTime){
-        this.endTime=endTime;
-    }
 }

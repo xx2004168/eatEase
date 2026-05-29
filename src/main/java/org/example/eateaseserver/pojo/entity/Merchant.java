@@ -2,6 +2,8 @@ package org.example.eateaseserver.pojo.entity;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -12,6 +14,7 @@ import java.util.Date;
  */
 @Schema(description = "商家表")
 @Table(name="merchant")
+@Data
 public class Merchant implements Serializable,Cloneable{
     /** 商家ID */
     @Id
@@ -36,61 +39,8 @@ public class Merchant implements Serializable,Cloneable{
     /** 营业状态：1营业中，0休息 */
     @Schema(description = "营业状态：1营业中，0休息")
     private Integer isOpen ;
+    /** 注册时间 */
+    @Schema(description = "注册时间")
+    private Date createTime ;
 
-    /** 商家ID */
-    public Long getId(){
-        return this.id;
-    }
-    /** 商家ID */
-    public void setId(Long id){
-        this.id=id;
-    }
-    /** 所属食堂ID */
-    public Long getCanteenId(){
-        return this.canteenId;
-    }
-    /** 所属食堂ID */
-    public void setCanteenId(Long canteenId){
-        this.canteenId=canteenId;
-    }
-    /** 商家名称 */
-    public String getName(){
-        return this.name;
-    }
-    /** 商家名称 */
-    public void setName(String name){
-        this.name=name;
-    }
-    /** 登录账号 */
-    public String getUsername(){
-        return this.username;
-    }
-    /** 登录账号 */
-    public void setUsername(String username){
-        this.username=username;
-    }
-    /** 登录密码（加密） */
-    public String getPassword(){
-        return this.password;
-    }
-    /** 登录密码（加密） */
-    public void setPassword(String password){
-        this.password=password;
-    }
-    /** 联系电话 */
-    public String getPhone(){
-        return this.phone;
-    }
-    /** 联系电话 */
-    public void setPhone(String phone){
-        this.phone=phone;
-    }
-    /** 营业状态：1营业中，0休息 */
-    public Integer getIsOpen(){
-        return this.isOpen;
-    }
-    /** 营业状态：1营业中，0休息 */
-    public void setIsOpen(Integer isOpen){
-        this.isOpen=isOpen;
-    }
 }

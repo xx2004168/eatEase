@@ -25,8 +25,8 @@ public class Admin implements Serializable, Cloneable {
     private String password;
 
     @Schema(description = "昵称")
-    @TableField("nickname")
-    private String nickname;
+    @TableField("name")
+    private String name;
 
     @Schema(description = "创建时间")
     @TableField("create_time")

@@ -14,6 +14,13 @@ public class CommonResult {
         result.setData(data);
         return result;
     }
+    public static CommonResult success(String message) {
+        CommonResult result = new CommonResult();
+        result.setCode(200);
+        result.setMessage(message);
+        result.setData(null);
+        return result;
+    }
     public static CommonResult error(Integer code, String message) {
         CommonResult result = new CommonResult();
         result.setCode(code);

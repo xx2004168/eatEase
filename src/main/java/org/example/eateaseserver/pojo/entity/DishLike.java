@@ -2,6 +2,8 @@ package org.example.eateaseserver.pojo.entity;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -12,6 +14,7 @@ import java.util.Date;
  */
 @Schema(description = "菜品点赞表")
 @Table(name="dish_like")
+@Data
 public class DishLike implements Serializable,Cloneable{
     /** 点赞ID */
     @Id
@@ -27,37 +30,4 @@ public class DishLike implements Serializable,Cloneable{
     /** 点赞时间 */
     @Schema(description = "点赞时间")
     private Date likeTime ;
-
-    /** 点赞ID */
-    public Long getId(){
-        return this.id;
-    }
-    /** 点赞ID */
-    public void setId(Long id){
-        this.id=id;
-    }
-    /** 用户ID */
-    public Long getUserId(){
-        return this.userId;
-    }
-    /** 用户ID */
-    public void setUserId(Long userId){
-        this.userId=userId;
-    }
-    /** 菜品ID */
-    public Long getDishId(){
-        return this.dishId;
-    }
-    /** 菜品ID */
-    public void setDishId(Long dishId){
-        this.dishId=dishId;
-    }
-    /** 点赞时间 */
-    public Date getLikeTime(){
-        return this.likeTime;
-    }
-    /** 点赞时间 */
-    public void setLikeTime(Date likeTime){
-        this.likeTime=likeTime;
-    }
 }

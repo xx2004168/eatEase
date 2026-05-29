@@ -10,6 +10,7 @@ import javax.crypto.SecretKey;
 import java.util.Date;
 import java.util.Map;
 
+// 你想让一个类被 Spring 管理、能被自动注入、到处用，就加 @Component。
 @Component
 public class JwtUtil {
     @Value("${jwt.secret}")

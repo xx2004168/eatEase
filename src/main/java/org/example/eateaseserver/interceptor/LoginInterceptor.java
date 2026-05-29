@@ -17,6 +17,11 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
+        String uri = request.getRequestURI();
+        if (uri.equals("/auth/login") || uri.equals("/auth/register")) {
+            return true;
+        }
+
         String token = request.getHeader("Authorization");
         if (token == null || token.isEmpty()) {
             response.setStatus(401);
