@@ -26,4 +26,7 @@ public class RegisterRequest {
 
     @Schema(description = "头像/商家图片URL")
     private String imgUrl;
+
+    @Schema(description = "营业状态：1营业中，0休息")
+    private Integer isOpen;
 }

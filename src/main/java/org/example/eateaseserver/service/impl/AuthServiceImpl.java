@@ -148,7 +148,7 @@ public class AuthServiceImpl implements AuthService {
         merchant.setCanteenId(request.getCanteenId());
         merchant.setPhone(request.getPhone());
         merchant.setImgUrl(request.getImgUrl());
-        merchant.setIsOpen(0);
+        merchant.setIsOpen(request.getIsOpen() != null ? request.getIsOpen() : 0);
         boolean success = merchantService.insert(merchant);
         if (!success) {
             throw new RuntimeException("商家注册失败");
