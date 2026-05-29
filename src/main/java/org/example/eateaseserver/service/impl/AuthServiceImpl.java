@@ -118,6 +118,7 @@ public class AuthServiceImpl implements AuthService {
         user.setUsername(request.getUsername());
         user.setPassword(md5Password);
         user.setName(request.getName());
+        user.setImgUrl(request.getImgUrl());
         user.setPoints(0);
         user.setCreateTime(new Date());
         boolean success = userService.insert(user);
@@ -146,6 +147,7 @@ public class AuthServiceImpl implements AuthService {
         merchant.setName(request.getName());
         merchant.setCanteenId(request.getCanteenId());
         merchant.setPhone(request.getPhone());
+        merchant.setImgUrl(request.getImgUrl());
         merchant.setIsOpen(0);
         boolean success = merchantService.insert(merchant);
         if (!success) {

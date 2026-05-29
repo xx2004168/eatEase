@@ -40,4 +40,8 @@ public class User implements Serializable,Cloneable{
     @Schema(description = "手机号")
     private String phone;
 
+    /** 头像URL */
+    @Schema(description = "头像URL")
+    private String imgUrl;
+
 }

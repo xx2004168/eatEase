@@ -23,4 +23,7 @@ public class RegisterRequest {
 
     @Schema(description = "联系电话")
     private String phone;
+
+    @Schema(description = "头像/商家图片URL")
+    private String imgUrl;
 }

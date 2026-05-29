@@ -42,5 +42,8 @@ public class Merchant implements Serializable,Cloneable{
     /** 注册时间 */
     @Schema(description = "注册时间")
     private Date createTime ;
+    /** 商家图片URL */
+    @Schema(description = "商家图片URL")
+    private String imgUrl;
 
 }
