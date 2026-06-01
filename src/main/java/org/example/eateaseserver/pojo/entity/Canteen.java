@@ -36,4 +36,7 @@ public class Canteen implements Serializable,Cloneable{
     /** 位置描述 */
     @Schema(description = "位置描述")
     private String location ;
+    /** 食堂图片URL */
+    @Schema(description = "食堂图片URL")
+    private String imgUrl;
 }

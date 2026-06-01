@@ -5,5 +5,6 @@ import org.example.eateaseserver.pojo.entity.User;
 
 public interface UserService {
     boolean insert(User user);
+    User selectByUsername(String username);
 
 }
